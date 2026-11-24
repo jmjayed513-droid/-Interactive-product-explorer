@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore products using an interactive API-driven application.">
+
+    <title>Product Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="container">
+
+            <h1>Product Explorer</h1>
+
+            <p>Discover and explore amazing products</p>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Search and Filter -->
+        <section class="controls">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search products..."
+                aria-label="Search products"
+            >
+
+            <select id="categoryFilter" aria-label="Filter products by category">
+
+                <option value="all">All Categories</option>
+
+            </select>
+
+            <button id="showAllBtn" class="filter-btn">
+                All Products
+            </button>
+
+            <button id="showFavoritesBtn" class="filter-btn">
+                ❤️ My Favorites
+            </button>
+
+        </section>
+
+
+        <!-- Status Message -->
+        <section id="statusMessage" aria-live="polite">
+
+            <p>Products will appear here.</p>
+
+        </section>
+
+
+        <!-- Retry Button -->
+        <div id="retryContainer" class="retry-container" hidden>
+
+            <button id="retryBtn" class="retry-btn">
+                Try Again
+            </button>
+
+        </div>
+
+
+        <!-- Products -->
+        <section class="product-section">
+
+            <h2 id="sectionTitle">Explore Products</h2>
+
+            <div id="productContainer" class="product-grid">
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Product Details Modal -->
+    <div id="productModal" class="modal">
+
+        <div class="modal-content">
+
+            <button id="closeModal" class="close-btn" aria-label="Close modal">
+                &times;
+            </button>
+
+            <img id="modalImage" src="" alt="Product Image">
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalCategory"></p>
+
+            <h3 id="modalPrice"></h3>
+
+            <p id="modalDescription"></p>
+
+            <p id="modalRating"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            Product Explorer | Software Development Mini Project
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
